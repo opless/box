@@ -1,0 +1,13 @@
+[Unit]
+Description=JoyStick
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/opt/RetroFlag/joystick.sh
+
+
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,13 @@
+[Unit]
+Description=SafeShutdown
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/opt/RetroFlag/SafeShutdown.py
+
+
+[Install]
+WantedBy=multi-user.target
+

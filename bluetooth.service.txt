@@ -1,0 +1,8 @@
+Ensure you have the following lines in [Service]:
+
+ExecStart=/usr/lib/bluetooth/bluetoothd --compat
+ExecStartPost=/usr/bin/sdptool add SP
+
+--compat enables sdptool to function, as bluez 5.x uses dbus by default
+The latter gives you rfcomm serial port 'SP'
+

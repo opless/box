@@ -1,0 +1,14 @@
+[Unit]
+Description=RFCOMM
+After=bluetooth.service
+Requires=bluetooth.service
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/opt/RetroFlag/rfcomm.sh
+
+
+[Install]
+WantedBy=multi-user.target
+

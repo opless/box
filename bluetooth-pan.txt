@@ -1,0 +1,17 @@
+From: https://raspberrypi.stackexchange.com/a/71587/28133
+
+/etc/systemd/network/pan0.netdev
+
+/etc/systemd/network/pan0.network
+
+/etc/systemd/system/bt-agent.service
+
+/etc/systemd/system/bt-network.service
+
+sudo systemctl enable systemd-networkd
+sudo systemctl enable bt-agent
+sudo systemctl enable bt-network
+sudo systemctl start systemd-networkd
+sudo systemctl start bt-agent
+sudo systemctl start bt-network
+

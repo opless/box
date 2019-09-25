@@ -1,0 +1,14 @@
+[Unit]
+Description=BTLE GATT UART
+After=bluetooth.service
+Requires=bluetooth.service
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/opt/RetroFlag/gatt-uart/uart-peripheral.py
+
+
+[Install]
+WantedBy=multi-user.target
+
